@@ -1,6 +1,6 @@
-# Tauri + Next.js + Typescript
+# ChatGPT Desktop App
 
-This template should help get you started developing with Tauri, Next.js and Typescript.
+Unofficial open source chat-gpt desktop app, macOS and windows
 
 ## Recommended IDE Setup
 
