@@ -25,18 +25,29 @@ fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![greet])
         .system_tray(tray)
+        .on_window_event(|event| match event.event() {
+            tauri::WindowEvent::CloseRequested { api, .. } => {
+                event.window().hide().unwrap();
+                api.prevent_close();
+            }
+            _ => {}
+        })
         .on_system_tray_event(|app, event| match event {
             SystemTrayEvent::LeftClick {
                 position: _,
                 size: _,
                 ..
             } => {
+                app.get_window("main").unwrap().show().unwrap();
                 app.get_window("main").unwrap().set_focus().unwrap();
             }
             SystemTrayEvent::MenuItemClick { id, .. } => match id.as_str() {
                 "show" => {
                     // app.get_window("main").unwrap().hide().unwrap();
+                    // app.get_window("main").unwrap().show();
+                    app.get_window("main").unwrap().show().unwrap();
                     app.get_window("main").unwrap().set_focus().unwrap();
+                    // event.window().shpw().unwrap();
                 }
                 "quit" => {
                     std::process::exit(0);
