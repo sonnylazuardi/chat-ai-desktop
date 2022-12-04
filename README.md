@@ -7,7 +7,7 @@ Unofficial open source chat-gpt desktop app, macOS and windows
 # Downloads
 
 - [Windows x86](/releases/chatgpt.exe)
-- [MacOS](/releases/macos.dmg)
+- [MacOS](/releases/chatgpt.dmg)
 
 ## Recommended IDE Setup
 
