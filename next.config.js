@@ -8,16 +8,4 @@ const nextConfig = {
   },
 };
 
-module.exports = {
-  ...nextConfig,
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "https://chat.openai.com/chat",
-        permanent: false,
-        basePath: false,
-      },
-    ];
-  },
-};
+module.exports = nextConfig;

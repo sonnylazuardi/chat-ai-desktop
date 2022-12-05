@@ -43,11 +43,8 @@ fn main() {
             }
             SystemTrayEvent::MenuItemClick { id, .. } => match id.as_str() {
                 "show" => {
-                    // app.get_window("main").unwrap().hide().unwrap();
-                    // app.get_window("main").unwrap().show();
                     app.get_window("main").unwrap().show().unwrap();
                     app.get_window("main").unwrap().set_focus().unwrap();
-                    // event.window().shpw().unwrap();
                 }
                 "quit" => {
                     std::process::exit(0);
