@@ -3,6 +3,7 @@
 Unofficial open source chat-gpt desktop app, macOS and windows
 
 ![screen](screenshot.png)
+![screen-mac](macss.jpg)
 
 # Downloads
 
