@@ -13,3 +13,15 @@ Unofficial open source OpenAI ChatGPT desktop app for mac and windows menubar us
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+
+## Developing
+
+```
+yarn tauri dev
+```
+
+## Building
+
+```
+yarn tauri build
+```
