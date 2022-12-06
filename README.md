@@ -2,14 +2,14 @@
 
 Unofficial open source OpenAI ChatGPT desktop app for mac and windows menubar using tauri & rust.
 
-![screen](screenshot.png)
+![screen](screenshotwin.png)
 ![screen-mac](macss.jpg)
 ![screen-ma2c](ssmac2.jpg)
 
 # Downloads
 
-- [Windows](/releases/chatgpt.msi)
-- [MacOS](/releases/chatgpt.dmg)
+- [Windows](https://github.com/sonnylazuardi/chatgpt-desktop/raw/master/releases/chatgpt.msi)
+- [MacOS](https://github.com/sonnylazuardi/chatgpt-desktop/raw/master/releases/chatgpt.dmg)
 
 ## Recommended IDE Setup
 
