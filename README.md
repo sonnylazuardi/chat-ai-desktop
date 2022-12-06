@@ -8,8 +8,8 @@ Unofficial open source OpenAI ChatGPT desktop app for mac and windows menubar us
 
 # Downloads
 
-- [Windows](/raw/master/releases/chatgpt.msi)
-- [MacOS](/raw/master/releases/chatgpt.dmg)
+- [Windows](https://github.com/sonnylazuardi/chatgpt-desktop/raw/master/releases/chatgpt.msi)
+- [MacOS](https://github.com/sonnylazuardi/chatgpt-desktop/raw/master/releases/chatgpt.dmg)
 
 ## Recommended IDE Setup
 
