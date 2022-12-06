@@ -53,6 +53,7 @@
     },
     "windows": [
       {
+        "url": "https://chat.openai.com/chat",
         "fullscreen": false,
         "height": 600,
         "resizable": true,
