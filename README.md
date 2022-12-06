@@ -4,6 +4,7 @@ Unofficial open source OpenAI ChatGPT desktop app for mac and windows menubar us
 
 ![screen](screenshot.png)
 ![screen-mac](macss.jpg)
+![screen-ma2c](ssmac2.jpg)
 
 # Downloads
 
