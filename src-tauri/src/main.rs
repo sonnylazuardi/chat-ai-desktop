@@ -10,7 +10,7 @@ fn greet(name: &str) -> String {
 }
 
 use tauri::{
-    CustomMenuItem, Manager, Menu, MenuItem, Submenu, SystemTray, SystemTrayEvent, SystemTrayMenu,
+    CustomMenuItem, Manager, Menu, MenuItem, SystemTray, SystemTrayEvent, SystemTrayMenu,
     SystemTrayMenuItem,
 };
 
@@ -23,13 +23,9 @@ fn main() {
         .add_item(quit);
     let tray = SystemTray::new().with_menu(tray_menu);
 
-    let quit = CustomMenuItem::new("quit".to_string(), "Quit");
-    let close = CustomMenuItem::new("close".to_string(), "Close");
-    let submenu = Submenu::new("File", Menu::new().add_item(quit).add_item(close));
     let menu = Menu::new()
         .add_native_item(MenuItem::Copy)
-        .add_native_item(MenuItem::Paste)
-        .add_submenu(submenu);
+        .add_native_item(MenuItem::Paste);
 
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![greet])
