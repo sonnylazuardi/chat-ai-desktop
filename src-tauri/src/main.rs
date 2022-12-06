@@ -3,15 +3,8 @@
     windows_subsystem = "windows"
 )]
 
-// Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-#[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
-
 use tauri::{
-    CustomMenuItem, Manager, Menu, MenuItem, SystemTray, SystemTrayEvent, SystemTrayMenu,
-    SystemTrayMenuItem,
+    CustomMenuItem, Manager, SystemTray, SystemTrayEvent, SystemTrayMenu, SystemTrayMenuItem,
 };
 
 fn main() {
@@ -23,13 +16,10 @@ fn main() {
         .add_item(quit);
     let tray = SystemTray::new().with_menu(tray_menu);
 
-    let menu = Menu::new()
-        .add_native_item(MenuItem::Copy)
-        .add_native_item(MenuItem::Paste);
+    let context = tauri::generate_context!();
 
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
-        .menu(menu)
+        .menu(tauri::Menu::os_default(&context.package_info().name))
         .system_tray(tray)
         .on_window_event(|event| match event.event() {
             tauri::WindowEvent::CloseRequested { api, .. } => {
@@ -59,6 +49,6 @@ fn main() {
             },
             _ => {}
         })
-        .run(tauri::generate_context!())
+        .run(context)
         .expect("error while running tauri application");
 }
