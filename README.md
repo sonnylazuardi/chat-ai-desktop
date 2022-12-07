@@ -1,6 +1,6 @@
 # ChatGPT Desktop App
 
-Unofficial open source OpenAI ChatGPT desktop app for mac and windows menubar using tauri & rust.
+Unofficial open source OpenAI ChatGPT desktop app for mac, windows, and linux menubar using tauri & rust.
 
 ![screen](screenshotwin.png)
 ![screen-mac](macss.jpg)
