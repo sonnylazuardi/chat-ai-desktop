@@ -4,16 +4,19 @@
 )]
 
 use tauri::{
-    CustomMenuItem, Manager, SystemTray, SystemTrayEvent, SystemTrayMenu, SystemTrayMenuItem,
+    api, CustomMenuItem, Manager, SystemTray, SystemTrayEvent, SystemTrayMenu, SystemTrayMenuItem,
 };
 
 fn main() {
     let quit = CustomMenuItem::new("quit".to_string(), "Quit");
-    let show = CustomMenuItem::new("show".to_string(), "Show");
+    let github = CustomMenuItem::new("github".to_string(), "View on Github");
+    let twitter = CustomMenuItem::new("twitter".to_string(), "Author on Twitter");
     let tray_menu = SystemTrayMenu::new()
-        .add_item(show)
+        .add_item(quit)
         .add_native_item(SystemTrayMenuItem::Separator)
-        .add_item(quit);
+        .add_item(github)
+        .add_item(twitter);
+
     let tray = SystemTray::new().with_menu(tray_menu);
 
     let context = tauri::generate_context!();
@@ -38,9 +41,21 @@ fn main() {
                 app.get_window("main").unwrap().set_focus().unwrap();
             }
             SystemTrayEvent::MenuItemClick { id, .. } => match id.as_str() {
-                "show" => {
-                    app.get_window("main").unwrap().show().unwrap();
-                    app.get_window("main").unwrap().set_focus().unwrap();
+                "twitter" => {
+                    api::shell::open(
+                        &app.get_window("main").unwrap().shell_scope(),
+                        "https://twitter.com/sonnylazuardi".to_string(),
+                        None,
+                    )
+                    .unwrap();
+                }
+                "github" => {
+                    api::shell::open(
+                        &app.get_window("main").unwrap().shell_scope(),
+                        "https://github.com/sonnylazuardi/chatgpt-desktop".to_string(),
+                        None,
+                    )
+                    .unwrap();
                 }
                 "quit" => {
                     std::process::exit(0);
