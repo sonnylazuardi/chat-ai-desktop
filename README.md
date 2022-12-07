@@ -17,7 +17,7 @@ Unofficial open source OpenAI ChatGPT desktop app for mac, windows, and linux me
 
 ### Is it safe to login with my account in the app?
 
-Yes, it is safe. There is no data transferred in the app (you can check the source). If you are still unsure, you can build your own binary and use it.
+Yes, it is safe. There is no data transferred in the app (you can check the source). It's just a wrapper for OpenAI ChatGPT website. If you are still unsure, you can build your own binary and use it.
 
 ## Recommended IDE Setup
 
