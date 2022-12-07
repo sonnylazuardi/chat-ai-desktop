@@ -13,6 +13,11 @@ Unofficial open source OpenAI ChatGPT desktop app for mac, windows, and linux me
 - [Linux .deb](https://github.com/sonnylazuardi/chatgpt-desktop/raw/master/releases/chatgpt_0.2.0_amd64.deb) (2.3 MB)
 - [Linux .rpm](https://github.com/sonnylazuardi/chatgpt-desktop/raw/master/releases/chatgpt-0.2.0-2.x86_64.rpm) (2.1 MB)
 
+## FAQ
+
+### Is it safe to login with my account in the app?
+
+Yes, it is safe. There is no data transferred in the app (you can check the source). If you are still unsure, you can build your own binary and use it.
 
 ## Recommended IDE Setup
 
