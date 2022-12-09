@@ -37,11 +37,13 @@ https://support.apple.com/en-sg/guide/mac-help/mh40616/mac
 ## Developing
 
 ```
+yarn add -D @tauri-apps/cli && yarn install
 yarn tauri dev
 ```
 
 ## Building
 
 ```
+yarn add -D @tauri-apps/cli && yarn install
 yarn tauri build
 ```
