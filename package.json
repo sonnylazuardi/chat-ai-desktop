@@ -8,13 +8,13 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.1.0",
+    "@tauri-apps/api": "^1.2.0",
     "next": "^12.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.1.0",
+    "@tauri-apps/cli": "^1.2.2",
     "@types/node": "^18.7.11",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
