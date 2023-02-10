@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.arrow {
+  position: relative;
+  padding: 12px 0;
+}
+
+.arrow:before {
+  content: "";
+  height: 0;
+  width: 0;
+  border-width: 0 8px 12px 8px;
+  border-style: solid;
+  border-color: transparent transparent #2f2f2f transparent;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (prefers-color-scheme: dark) {
+  body > div {
+    border-radius: 7px;
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+}

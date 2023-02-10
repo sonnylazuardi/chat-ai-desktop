@@ -12,7 +12,10 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "globalShortcut": {
+        "all": true
+      }
     },
     "bundle": {
       "active": true,
@@ -54,20 +57,29 @@
     "updater": {
       "active": false
     },
+    "macOSPrivateApi": true,
     "windows": [
       {
         "userAgent": "chrome",
         "url": "https://chat.openai.com/chat",
         "fullscreen": false,
-        "height": 600,
         "resizable": true,
         "title": "chatgpt",
-        "width": 800
+        "height": 600,
+        "width": 500,
+        "visible": false,
+        "hiddenTitle": true,
+        "decorations": false,
+        "focus": true,
+        "transparent": true,
+        "skipTaskbar": true,
+        "alwaysOnTop": true
       }
     ],
     "systemTray": {
       "iconPath": "icons/icon.png",
-      "iconAsTemplate": true
+      "iconAsTemplate": true,
+      "menuOnLeftClick": false
     }
   }
 }

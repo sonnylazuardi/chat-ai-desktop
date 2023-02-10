@@ -1,6 +1,12 @@
+import { useEffect } from "react";
+
 function App() {
+  useEffect(() => {
+    document.body.classList.add("arrow");
+  }, []);
   return (
-    <div></div>
+    <div style={{ height: 100 }}>
+    </div>
   );
 }
 

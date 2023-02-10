@@ -16,7 +16,8 @@ tauri-build = {version = "1.2.1", features = [] }
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1.2.4", features = ["api-all", "devtools", "global-shortcut", "system-tray"] }
+tauri = { version = "1.2.4", features = ["api-all", "devtools", "global-shortcut", "macos-private-api", "system-tray"] }
+tauri-plugin-positioner = { version = "1.0.4", features = ["system-tray"] }
 
 [features]
 # by default Tauri runs in production mode
