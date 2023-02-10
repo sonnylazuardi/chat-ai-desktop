@@ -36,10 +36,6 @@ fn main() {
         .plugin(tauri_plugin_positioner::init())
         .setup(|app| {
             let main_window = app.get_window("main").unwrap();
-            main_window
-                .eval(inject_script)
-                .map_err(|err| println!("{:?}", err))
-                .ok();
             main_window.show().unwrap();
             main_window.set_focus().unwrap();
 
@@ -129,6 +125,11 @@ fn main() {
                     }
                     "quit" => {
                         std::process::exit(0);
+                    }
+                    "open" => {
+                        let main_window = app.get_window("main").unwrap();
+                        main_window.show().unwrap();
+                        main_window.set_focus().unwrap();
                     }
                     _ => {}
                 },
