@@ -3,7 +3,7 @@
 Unofficial open source OpenAI ChatGPT desktop app for mac, windows, and linux menubar using tauri & rust.
 
 ![screen](screenshotwin.png)
-![screen-mac](macss.jpg)
+![screen-mac](screenmac.png)
 ![screen-ma2c](ssmac2.jpg)
 
 # Downloads
@@ -28,7 +28,6 @@ Yes, it is safe. There is no data transferred in the app (you can check the sour
 3. Click Open.
 
 https://support.apple.com/en-sg/guide/mac-help/mh40616/mac
-
 
 ## Recommended IDE Setup
 
