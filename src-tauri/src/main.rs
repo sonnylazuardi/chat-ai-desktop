@@ -12,7 +12,11 @@ use tauri_plugin_positioner::{Position, WindowExt};
 fn main() {
     let inject_script = r#"
     var style = document.createElement('style');
-    style.innerHTML = 'body { background-color: transparent !important; margin: 0; } .arrow { position: relative; padding: 12px 0 0 0; } .arrow:before { content: ""; height: 0; width: 0; border-width: 0 8px 12px 8px; border-style: solid; border-color: transparent transparent #2f2f2f transparent; position: absolute; top: 0px; left: 50%; transform: translateX(-50%); } body > div { background-color: transparent !important; border-radius: 7px !important; overflow: hidden !important; } @media (prefers-color-scheme: light) { body > div { background-color: white !important; }}';
+    if (navigator.appVersion.includes('Mac')) {
+      style.innerHTML = 'body { background-color: transparent !important; margin: 0; } .arrow { position: relative; padding: 12px 0 0 0; } .arrow:before { content: ""; height: 0; width: 0; border-width: 0 8px 12px 8px; border-style: solid; border-color: transparent transparent #2f2f2f transparent; position: absolute; top: 0px; left: 50%; transform: translateX(-50%); } body > div { background-color: #343541 !important; border-radius: 7px !important; overflow: hidden !important; } @media (prefers-color-scheme: light) { body > div { background-color: white !important; }}';
+    } else {
+      style.innerHTML = 'body { background-color: transparent !important; margin: 0; } .arrow { position: relative; padding: 0 0 12px 0; } .arrow:after { content: ""; height: 0; width: 0; border-width: 12px 8px 0 8px; border-style: solid; border-color: #2f2f2f transparent transparent transparent; position: absolute; bottom: 0px; left: 50%; transform: translateX(-50%); } body > div { background-color: #343541 !important; border-radius: 7px !important; overflow: hidden !important; } @media (prefers-color-scheme: light) { body > div { background-color: white !important; }}';
+    }
     document.head.appendChild(style);
     document.body.classList.add('arrow');
     "#;
@@ -36,8 +40,6 @@ fn main() {
         .plugin(tauri_plugin_positioner::init())
         .setup(|app| {
             let main_window = app.get_window("main").unwrap();
-            main_window.show().unwrap();
-            main_window.set_focus().unwrap();
 
             let mut shortcut = app.global_shortcut_manager();
             shortcut
@@ -50,6 +52,10 @@ fn main() {
                     }
                 })
                 .unwrap_or_else(|err| println!("{:?}", err));
+
+            let main_window = app.get_window("main").unwrap();
+            main_window.show().unwrap();
+            main_window.set_focus().unwrap();
             Ok(())
         })
         .menu(tauri::Menu::os_default(&context.package_info().name))
