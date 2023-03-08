@@ -1,10 +1,8 @@
-# ChatGPT Desktop App
+# Chat AI Desktop App
 
-Unofficial open source OpenAI ChatGPT desktop app for mac, windows, and linux menubar using tauri & rust.
+Unofficial open source Chat AI desktop app for mac, windows, and linux menubar using tauri & rust.
 
 ![sswinmac](ssmerge.png)
-
-https://user-images.githubusercontent.com/856609/218365354-335ab01d-5d6f-4d97-af5f-a09e85f061b4.mp4
 
 # Downloads
 
@@ -17,13 +15,13 @@ https://user-images.githubusercontent.com/856609/218365354-335ab01d-5d6f-4d97-af
 
 ### Is it safe to login with my account in the app?
 
-Yes, it is safe. There is no data transferred in the app (you can check the source). It's just a wrapper for OpenAI ChatGPT website. If you are still unsure, you can build your own binary and use it.
+Yes, it is safe. There is no data transferred in the app (you can check the source). It's just a wrapper for teh popular Chat AI website. If you are still unsure, you can build your own binary and use it.
 
 ### I cannot open the MacOS app because developer cannot be verified?
 
 <img src="https://user-images.githubusercontent.com/856609/206362820-761ae201-8c21-4770-82da-d54ed886366f.png" width="200px" />
 
-1. In the Finder on your Mac, locate the chatgpt app. Don't use Launchpad to do this. Launchpad doesn't allow you to access the shortcut menu.
+1. In the Finder on your Mac, locate the chat ai app. Don't use Launchpad to do this. Launchpad doesn't allow you to access the shortcut menu.
 2. Control-click the app icon, then choose Open from the shortcut menu.
 3. Click Open.
 
