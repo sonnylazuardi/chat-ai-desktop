@@ -3,8 +3,7 @@
     "beforeDevCommand": "yarn dev",
     "beforeBuildCommand": "yarn build",
     "devPath": "http://localhost:1420",
-    "distDir": "../dist",
-    "withGlobalTauri": false
+    "distDir": "../dist"
   },
   "package": {
     "productName": "chatgpt",
@@ -39,7 +38,6 @@
         "providerShortName": null,
         "signingIdentity": null
       },
-      "resources": [],
       "shortDescription": "",
       "targets": "all",
       "windows": {
@@ -61,7 +59,6 @@
     "macOSPrivateApi": true,
     "windows": [
       {
-        "userAgent": "chrome",
         "url": "https://chat.openai.com/chat",
         "fullscreen": false,
         "resizable": true,
