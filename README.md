@@ -2,6 +2,8 @@
 
 Unofficial open source Chat AI desktop app for mac, windows, and linux menubar using tauri & rust.
 
+https://user-images.githubusercontent.com/856609/218365354-335ab01d-5d6f-4d97-af5f-a09e85f061b4.mp4
+
 ![sswinmac](ssmerge.png)
 
 # Downloads
