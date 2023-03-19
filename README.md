@@ -8,8 +8,8 @@ https://user-images.githubusercontent.com/856609/218365354-335ab01d-5d6f-4d97-af
 
 # Downloads
 
-- [Windows](https://github.com/sonnylazuardi/chat-ai-desktop/releases/download/v0.3.0/chatgpt.msi) (4.11 MB)
-- [MacOS](https://github.com/sonnylazuardi/chat-ai-desktop/releases/download/v0.3.0/chatgpt.dmg) (1.97 MB)
+- [Windows](https://github.com/sonnylazuardi/chat-ai-desktop/releases/download/v0.4.0/chatgpt.msi) (4.11 MB)
+- [MacOS](https://github.com/sonnylazuardi/chat-ai-desktop/releases/download/v0.4.0/chatgpt.dmg) (3.8 MB)
 - [Linux .deb](https://github.com/sonnylazuardi/chatgpt-desktop/raw/master/releases/chatgpt_0.2.0_amd64.deb) (2.3 MB)
 - [Linux .rpm](https://github.com/sonnylazuardi/chatgpt-desktop/raw/master/releases/chatgpt-0.2.0-2.x86_64.rpm) (2.1 MB)
 
