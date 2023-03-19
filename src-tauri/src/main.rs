@@ -31,11 +31,16 @@ fn main() {
 
     let open = CustomMenuItem::new("open".to_string(), "Open").accelerator("Cmd+Shift+O");
     let quit = CustomMenuItem::new("quit".to_string(), "Quit").accelerator("Cmd+Q");
+    let api_mode = CustomMenuItem::new("api_mode".to_string(), "API Mode");
+    let web_mode = CustomMenuItem::new("web_mode".to_string(), "Web Mode");
     let github = CustomMenuItem::new("github".to_string(), "View on Github");
     let twitter = CustomMenuItem::new("twitter".to_string(), "Author on Twitter");
     let tray_menu = SystemTrayMenu::new()
         .add_item(open)
         .add_item(quit)
+        .add_native_item(SystemTrayMenuItem::Separator)
+        .add_item(web_mode)
+        .add_item(api_mode)
         .add_native_item(SystemTrayMenuItem::Separator)
         .add_item(github)
         .add_item(twitter);
@@ -111,14 +116,14 @@ fn main() {
                     size: _,
                     ..
                 } => {
-                    println!("system tray received a right click");
+                    //println!("system tray received a right click");
                 }
                 SystemTrayEvent::DoubleClick {
                     position: _,
                     size: _,
                     ..
                 } => {
-                    println!("system tray received a double click");
+                    //println!("system tray received a double click");
                 }
                 SystemTrayEvent::MenuItemClick { id, .. } => match id.as_str() {
                     "twitter" => {
@@ -136,6 +141,22 @@ fn main() {
                             None,
                         )
                         .unwrap();
+                    }
+                    "web_mode" => {
+                        let main_window = app.get_window("main").unwrap();
+                        main_window.show().unwrap();
+                        main_window.set_focus().unwrap();
+                        main_window.eval(&format!(
+                            "window.location.replace('https://chat.openai.com/chat')"
+                        ));
+                    }
+                    "api_mode" => {
+                        let main_window = app.get_window("main").unwrap();
+                        main_window.show().unwrap();
+                        main_window.set_focus().unwrap();
+                        main_window.eval(&format!(
+                            "window.location.replace('https://sonnylab-gpt.vercel.app')"
+                        ));
                     }
                     "quit" => {
                         std::process::exit(0);
