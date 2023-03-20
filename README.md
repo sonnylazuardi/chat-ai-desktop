@@ -17,7 +17,15 @@ https://user-images.githubusercontent.com/856609/218365354-335ab01d-5d6f-4d97-af
 
 ![apimode](https://user-images.githubusercontent.com/856609/226231332-de31b46f-196b-45b8-85ef-5ee1c4124333.png)
 
-I would like to credits [open source chatbot UI](https://github.com/mckaywrigley/chatbot-ui) by [@mckaywrigley](https://twitter.com/mckaywrigley) that made this possible. The desktop app wrapping the [forked version here](https://github.com/sonnylazuardi/chatbot-ui-pro)
+I would like to credit [open source chatbot UI](https://github.com/mckaywrigley/chatbot-ui) by [@mckaywrigley](https://twitter.com/mckaywrigley) that made this possible. The desktop app wrapping the [forked version here](https://github.com/sonnylazuardi/chatbot-ui-pro)
+
+### Set your API Key
+
+You can visit [OpenAI Account](https://platform.openai.com/account/api-keys) to get your own API key, click menu on the top left and input your API Key
+
+<img src="apikey.png" style="width: 200px">
+
+
 
 ## FAQ
 
