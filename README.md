@@ -13,6 +13,12 @@ https://user-images.githubusercontent.com/856609/218365354-335ab01d-5d6f-4d97-af
 - [Linux .deb](https://github.com/sonnylazuardi/chatgpt-desktop/raw/master/releases/chatgpt_0.2.0_amd64.deb) (2.3 MB)
 - [Linux .rpm](https://github.com/sonnylazuardi/chatgpt-desktop/raw/master/releases/chatgpt-0.2.0-2.x86_64.rpm) (2.1 MB)
 
+## API Mode
+
+![apimode](https://user-images.githubusercontent.com/856609/226231332-de31b46f-196b-45b8-85ef-5ee1c4124333.png)
+
+I would like to credits [open source chatbot UI](https://github.com/mckaywrigley/chatbot-ui) by [@mckaywrigley](https://twitter.com/mckaywrigley) that made this possible. The desktop app wrapping the [forked version here](https://github.com/sonnylazuardi/chatbot-ui-pro)
+
 ## FAQ
 
 ### Is it safe to login with my account in the app?
